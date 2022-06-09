@@ -1,19 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6"><h3 class="text-center my-4">Type in your location:</h3>
-      <form>
+      <form [formGroup]="location" (ngSubmit)="sendToAPIXU(location.value)" >
         <div class="form-group">
           <input
             class="form-control"
             type="text"
             id="weatherLocation"
             aria-describedby="weatherLocation"
-            placeholder="Please input a Location"
+            placeholder="Type in your place for the forecast"
+            formControlName="location"
           />
         </div>
         <div class="text-center">
+          <p></p>
           <button type="submit" class="btn btn-warning btn-md">
-            Give me the forecast!</button>
+            Get my forecast!
+          </button>
         </div>
       </form>
     </div>
