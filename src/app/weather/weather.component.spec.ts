@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeatherComponent } from './weather.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 describe('WeatherComponent', () => {
   let component: WeatherComponent;
@@ -9,8 +10,9 @@ describe('WeatherComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, FormsModule],
-      declarations: [ WeatherComponent ]
+      imports: [ReactiveFormsModule, FormsModule, HttpClientModule],
+      declarations: [ WeatherComponent ],
+      providers: [HttpClientModule]
     })
     .compileComponents();
   });
