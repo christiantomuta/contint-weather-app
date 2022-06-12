@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ApixuService} from "../apixu.service";
+import {BrowserModule} from "@angular/platform-browser";
+
+
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
