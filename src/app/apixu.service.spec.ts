@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 import {HttpClientModule} from "@angular/common/http";
 import {WeatherComponent} from "./weather/weather.component";
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ApixuService', () => {
   let service: ApixuService;
@@ -13,7 +14,7 @@ describe('ApixuService', () => {
   beforeEach(async () => {
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, FormsModule, HttpClientModule],
+      imports: [ReactiveFormsModule, FormsModule, HttpClientModule, RouterTestingModule],
       declarations: [ WeatherComponent ],
       providers: [HttpClientModule]
     })
