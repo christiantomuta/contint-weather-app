@@ -8,5 +8,5 @@ RUN npm run build --if-present
 
 FROM nginx:1.22-alpine
 WORKDIR /usr/share/nginx/html
-COPY --from=build-env /usr/src/app/dist/. .
+COPY --from=build-env /usr/src/app/dist/contint-weather-app/. .
 EXPOSE 80
